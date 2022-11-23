@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    var isNS = (navigator.appName == "Netscape") ? 1 : 0;
+    if(navigator.appName == "Netscape") document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);
+    function mischandler(){
+    return false;
+    }
+    function mousehandler(e){
+    var myevent = (isNS) ? e : event;
+    var eventbutton = (isNS) ? myevent.which : myevent.button;
+    if((eventbutton==2)||(eventbutton==3)) return false;
+    }
+    document.oncontextmenu = mischandler;
+    document.onmousedown = mousehandler;
+    document.onmouseup = mousehandler;
+    </script>
+<title>Karan Photography —  Professional Photographer </title>
+<link rel = "icon" href ="mainlogo.png"
+        type = "image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.w3-quarter img{margin-bottom: -6px; cursor: pointer}
+.w3-quarter img:hover{opacity: 0.6; transition: 0.3s}
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("portfolio.jpg");
+  min-height: 300px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+
+</style>
+<style>
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+body {
+  margin:0;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight:300;
+  letter-spacing: 2px;
+  font-size:48px;
+}
+p {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+  font-size:14px;
+  color: #333333;
+}
+
+.header {
+  position:relative;
+  text-align:center;
+  background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+  color:white;
+}
+.logo {
+  width:50px;
+  fill:white;
+  padding-right:15px;
+  display:inline-block;
+  vertical-align: middle;
+}
+
+.inner-header {
+  height:65vh;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flex { /*Flexbox for containers*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.waves {
+  position:relative;
+  width: 100%;
+  height:15vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:100px;
+  max-height:150px;
+}
+
+.content {
+  position:relative;
+  height:20vh;
+  text-align:center;
+  background-color: white;
+}
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height:40px;
+    min-height:40px;
+  }
+  .content {
+    height:30vh;
+  }
+  h1 {
+    font-size:24px;
+  }
+}
+@media (max-width: 1000px) {
+        .hidden-mobile {
+          display: none;
+        }
+      }
+</style>
+</head>
+<body class="w3-light-gray">
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-white w3-xlarge w3-padding-16" style="opacity: 90%;" id="#">
+  <span class="w3-left w3-padding">Karan Phogtography™</span>
+  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+  <a href="https://www.instagram.com/karan_photography011/" target="_blank" class="w3-right"><i class="fa fa-instagram fa-2x"></i></a>
+</header>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
+  <a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32"><i class="fa fa-times w3-xlarge" aria-hidden="true"></i></a> 
+  <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">HOME</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">ABOUT ME</a>
+  <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">PORTFOLIO</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">CONTACT</a>
+  <a href="https://www.instagram.com/karan_photography011/" target="_blank" class="w3-bar-item w3-center w3-padding-16 w3-button"><i class="fa fa-instagram fa-2x hidden-mobile"></i></a>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+
+<!--Hey! This is the original version
+of Simple CSS Waves-->
+
+<div class="header">
+
+<!--Content before waves-->
+  <div class="inner-header flex">
+  
+  <h1><span class="auto-input w3-xxlarge w3-bold"></span>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<script>
+ let typed = new Typed(".auto-input", {
+   strings: ["Birthday Shoot", "Pre-Wedding Shoot", "Wedding Shoot", "Couple Shoot", "Portrait", "All types of shoots are done..."],
+   typeSpeed: 100,
+   backSpeed: 100,
+   loop: true
+ })
+</script></h1>
+  </div>
+  
+  <!--Waves Container-->
+  <div>
+  <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+  <defs>
+  <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+  </defs>
+  <g class="parallax">
+  <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+  <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+  <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+  <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+  </g>
+  </svg>
+  </div>
+  <!--Waves end-->
+  
+  </div>
+  <!--Header ends-->
+
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+    <h3 class="w3-center">ABOUT ME</h3>
+    <p class="w3-center"><em>I love photography</em></p>
+    <p>Photography is the art, application, and practice of creating durable images by recording light, either electronically by means of an image sensor, or chemically by means of a light-sensitive material such as photographic film. It is employed in many fields of science, manufacturing (e.g., photolithography), and business, as well as its more direct uses for art, film and video production, recreational purposes, hobby, and mass communication. Typically, a lens is used to focus the light reflected or emitted from objects into a real image on the light-sensitive surface inside a camera during a timed exposure. With an electronic image sensor, this produces an electrical charge at each pixel, which is electronically processed and stored in a digital image file for subsequent display or processing. The result with photographic emulsion is an invisible latent image, which is later chemically "developed" into a visible image, either negative or positive, depending on the purpose of the photographic material and the method of processing. A negative image on film is traditionally used to photographically create a positive image on a paper base, known as a print, either by using an enlarger or by contact printing.</p>
+    <p class="w3-right">— Wikipedia</p>
+    <div class="w3-row">
+      <div class="w3-col  w3-center w3-padding-large">
+        <p><b><i class="fa fa-user w3-margin-right"></i>Karan Gagat</b></p><br>
+        <img src="10.jpg" class="w3-round w3-image" alt="Photo of Me" width="500" height="333">
+      </div>
+    </div>
+</div>
+
+
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min w3-grayscale-min" id="portfolio">
+    <div class="w3-display-middle">
+      <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
+    </div>
+  </div>
+
+  <!-- Container (Portfolio Section) -->
+  <div class="w3-content w3-container w3-padding-64">
+    <h3 class="w3-center">MY WORK</h3>
+    <p class="w3-center"><em>Here are some of my latest captured moments.<br> Click on the images to make them bigger</em></p><br>
+
+  </div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content" style="max-width:1600px;margin-top:83px">
+
+<!--Slideshow-->
+<div class="row">
+  <div class="column">
+    <img src="1.jpg" style="width:100%; height: 270px;" onclick="onClick(this)" alt="Karan Photography">
+  </div>
+  <div class="column">
+    <img src="7.jpg" style="width:100%; height: 270px;" onclick="onClick(this)" alt="Karan Photography">
+  </div>
+  <div class="column">
+    <img src="11.jpg" style="width:100%" onclick="onClick(this)" alt="Karan Photography">
+  </div>
+  <div class="column">
+    <img src="12.jpg" style="width:100%" onclick="onClick(this)" alt="Karan Photography">
+  </div>
+</div>
+<br>
+<br>
+<br>
+<div class="row">
+  <div class="column">
+    <img src="22.jpg" style="width:100%; height: 400px;" onclick="onClick(this)" alt="Karan Photography">
+  </div>
+  <div class="column">
+    <img src="5.jpg" style="width:100%" onclick="onClick(this)" alt="Karan Photography">
+  </div>
+  <div class="column">
+    <img src="6.jpg" style="width:100%" onclick="onClick(this)" alt="Karan Photography">
+  </div>
+  <div class="column">
+    <img src="9.jpg" style="width:100%" onclick="onClick(this)" alt="Karan Photography">
+  </div>
+</div>
+<br>
+<br>
+<br>
+<div class="row">
+  <div class="column">
+    <img src="20.jpg" style="width:100%" onclick="onClick(this)" alt="Karan Photography">
+  </div>
+  <div class="column">
+    <img src="24.jpg" style="width:65%; margin-left: 65px;" onclick="onClick(this)" alt="Karan Photography">
+  </div>
+  <div class="column">
+    <img src="21.jpg" style="width:100%; height: 370px;" onclick="onClick(this)" alt="Karan Photography">
+  </div>
+  <div class="column">
+    <img src="18.jpg" style="width:100%" onclick="onClick(this)" alt="Karan Photography">
+  </div>
+</div>
+<br>
+<br>
+<br>
+<div class="row">
+  <div class="column">
+    <img src="13.jpg" style="width:70%; margin-left: 65px" onclick="onClick(this)" alt="Karan Photography">
+  </div>
+  <div class="column">
+    <img src="14.jpg" style="width:70%; margin-left: 65px; height: 370px;" onclick="onClick(this)" alt="Karan Photography">
+  </div>
+  <div class="column">
+    <img src="17.jpg" style="width:100%" onclick="onClick(this)" alt="Karan Photography">
+  </div>
+  <div class="column">
+    <img src="8.jpg" style="width:100%" onclick="onClick(this)" alt="Karan Photography">
+  </div>
+</div>
+
+
+<!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+<!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-grey" >
+    <div class="w3-row-padding">
+      <div class="w3-third">
+        <h3>Travels</h3>
+        <style>
+          .scene{position:relative;
+  display:block; 
+  margin:0 auto; 
+  width:300px;
+  height:200px; 
+}
+.plane,
+.cloud{
+  position:absolute;
+}
+/*plane animation*/
+.plane{ 
+  animation-duration: 1s;
+  animation-name: anim-plane;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function:linear;
+  
+  animation-fill-mode:forwards;	   
+  display:block;
+  margin:0 auto;
+  transform: translateY(80px);
+  left:30%;
+}
+
+@keyframes anim-plane{ 
+  to{
+    transform:translateY(95px);
+  }    
+}
+
+
+/* Cloud Animation */
+
+@keyframes fade{
+  0%{ opacity: 0;}
+  10%{ opacity: 1;}
+  90%{ opacity:1;}
+  100%{ opacity:0;}
+}
+
+@keyframes move{  
+  from{ 
+    left:200px; 
+  }
+  to{ 
+    left:0px; 
+  }
+}
+ 
+
+.cloud{ 
+  animation-duration:10s; 
+  animation-name:move, fade;
+  animation-direction: normal;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear; 
+  animation-fill-mode:both;	  
+  
+  display:block;
+  background:url(data:image/svg+xml;base64,PHN2ZyBpZD0iY2xvdWQiIHZpZXdCb3g9IjAgMCA1MiA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiAgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI1MnB4IiBoZWlnaHQ9IjQwcHgiPgoJPGRlZnM+CgkJPGZpbHRlciBpZD0iZjEiIHg9Ii0xMDAlIiB5PSItMTAwJSIgd2lkdGg9IjMwMCUiIGhlaWdodD0iMzAwJSI+IAoJCQk8ZmVPZmZzZXQgcmVzdWx0PSJvdXQiIGluPSJTb3VyY2VHcmFwaGljIiBkeD0iMCIgZHk9IjEiLz4KCQkJPGZlQ29sb3JNYXRyaXggcmVzdWx0PSJvdXQiIGluPSJvdXQiIHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIwIDAgMCAwIDAgIDAgMCAwIDAgMCAgMCAwIDAgMCAwICAwIDAgMCAwLjQgMCIvPgoJCQk8ZmVHYXVzc2lhbkJsdXIgcmVzdWx0PSJvdXQiIGluPSJvdXQiIHN0ZERldmlhdGlvbj0iMiIvPgoJCQk8ZmVCbGVuZCBpbj0iU291cmNlR3JhcGhpYyIgaW4yPSJvdXQiIG1vZGU9Im5vcm1hbCIgcmVzdWx0PSJkcCIvPgoJCTwvZmlsdGVyPgoJPC9kZWZzPiAKCTxwYXRoIGlkPSJmZy1jbG91ZCIgZmlsdGVyPSJ1cmwoI2YxKSIgZD0iTTYuMyAzNS4xQzQuNyAzNC4yLTAuNCAzMi4zIDEuNCAyNSAzLjEgMTguMSA4LjcgMTkuNSA4LjcgMTkuNSA4LjcgMTkuNSAzLjIgMTQuMSAxMC40IDYuOCAxNi45IDAuMiAyMy4xIDQuNiAyMy4xIDQuNiAyMy4xIDQuNiAzMC0xLjcgMzUuMiAyLjQgNDQuNiA5LjcgNDIuOCAyNS4zIDQyLjggMjUuMyA0Mi44IDI1LjMgNDggMjIuNiA0OS44IDI4LjYgNTEgMzIuNyA0NiAzNS44IDQyLjggMzYuNyAzOS43IDM3LjUgOC45IDM2LjYgNi4zIDM1LjFaIiBzdHJva2U9IiNjY2NjY2MiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0iI2ZmZmZmZiIvPgo8L3N2Zz4=);
+  height:40px;
+  width:53px;
+  margin:0 auto;  
+}
+.cloud--small{
+  animation-duration:6s; 
+  top:65px;
+  transform: scaleX(0.5) scaleY(0.5); 
+}
+.cloud--medium{ 
+  animation-duration:5s;
+  animation-delay:1s;
+  top:95px;
+  transform: scaleX(0.7) scaleY(0.7); 
+}
+.cloud--large{
+  animation-duration:4.5s;
+  animation-delay:2.5s;
+  top:95px;
+  transform: scaleX(0.8) scaleY(0.8); 
+}
+
+.whoami{
+  padding-top:3em;
+  text-align:center;  
+}
+        </style>
+        <div class="scene w3-left">
+          <span class="cloud cloud--small"></span>
+          <svg xmlns="http://www.w3.org/2000/svg" id="plane" class="plane" viewBox="0 0 104 47" x="0" y="0" width="104" height="47" background-color="#ffffff00">
+            <g id="avion">
+              <path d="M20 36C25 38 69 43 80 40 92 38 106 33 104 21 103 13 95 13 90 9 85 5 79 2 76 1 70-1 65 0 60 2 57 3 25 14 23 13 21 12 12 2 9 3 5 4 1 5 1 6 2 7 15 34 20 36Z" fill="#0085b2"/>
+              <path d="M23 36C28 37 69 43 80 40 88 38 98 34 102 29 82 32 22 36 23 36Z" stroke="#ffffff00" stroke-width="1" fill="#14647f"/>
+              <path d="M42 39C48 40 60 40 67 40 71 32 72 26 72 26L44 29C44 29 44 35 42 39Z" stroke="#ffffff00" stroke-width="1" fill="#0c3b4d"/>
+              <path d="M7 16C7 16 9 20 10 22 13 27 16 13 16 13L7 16Z" stroke="#ffffff00" stroke-width="1" fill="#0c3b4d"/>
+              <path d="M40 29C40 29 41 34 34 42 27 51 48 46 58 39 74 28 72 25 72 25L40 29Z" stroke="#ffffff00" stroke-width="1" fill="#006e96"/>
+              <path d="M5 14C5 14 6 15 3 19 1 22 10 20 13 17 19 11 17 11 17 11L5 14Z" stroke="#ffffff00" stroke-width="1" fill="#006e96"/>
+              <path d="M90 10C88 8 83 4 80 3 78 3 68 7 68 8 70 12 80 8 90 10Z" stroke="#ffffff00" stroke-width="1" fill="#0c3b4d"/>
+              <path d="M89 9C87 7 82 3 79 2 77 2 67 6 67 7 69 11 79 7 89 9Z" stroke="#ffffff00" stroke-width="1" fill="#afe2ff"/>
+            </g>
+          </svg>
+          <span class="cloud cloud--medium"></span>
+          <span class="cloud cloud--large"></span>
+        </div>
+      </div>
+
+      <div class="w3-third">
+        <h3>POPULAR TAGS</h3>
+        <p>
+          <span class="w3-tag w3-black w3-margin-bottom">Photography</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Birthday</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Happy</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Natural</span><br><span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Wedding</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Smile</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Style</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Portrait</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Family</span><br>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Model</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Art</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">ME</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Love</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Pre-wedding</span>
+        </p>
+      </div>
+
+      <div class ="w3-third" id="contact">
+        <h3>Contact Details</h3>
+<div class="w3-row w3-left-align">
+<i class="fa fa-map-marker" style="width:30px"></i>Chandigarh<br><br>
+<i class="fa fa-phone" style="width:30px"></i> +91 76960 46640<br><br>
+<i class="fa fa-envelope" style="width:30px"> </i>gagat.studios@gmail.com<br>
+</div>
+
+      </div>
+    </div>
+  </footer>
+
+  <div class="w3-black w3-center w3-padding-24">Design by :  <br><br> <a href="https://www.instagram.com/anishq.codes" title="Web Designer" target="_blank" class="w3-hover-opacity">Tanishq</a></div>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("demo");
+    let captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+  }
+</script>
+
+
+</body>
+</html>
